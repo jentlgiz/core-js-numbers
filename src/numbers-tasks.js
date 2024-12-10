@@ -113,12 +113,8 @@ function getLinearEquationRoot(a, b) {
  *   (0,1) (0,1)     => 0
  */
 function getAngleBetweenVectors(x1, y1, x2, y2) {
-  const sum1 = x1 * x2 + y1 * y2;
-  const vector1 = Math.sqrt(x1 ** 2 + y1 ** 2);
-  const vector2 = Math.sqrt(x2 ** 2 + y2 ** 2);
-  const sum2 = vector1 + vector2;
-  const result = sum1 / sum2;
-  return Math.acos(result);
+  const sum = x1 * x2 + y1 * y2;
+  return Math.acos(sum);
 }
 
 /**
@@ -253,8 +249,8 @@ function toNumber(/* value, def */) {
  *   -2 => -8
  *   0  => 0
  */
-function getCube(/* num */) {
-  throw new Error('Not implemented');
+function getCube(num) {
+  return num ** 3;
 }
 
 /**
