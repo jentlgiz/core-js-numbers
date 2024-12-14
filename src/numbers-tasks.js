@@ -329,7 +329,10 @@ function getSumOfDigits(num) {
  *   15  => false
  */
 function isPowerOfTwo(num) {
-  return num ** 2;
+  if ((2, Math.round(Math.log(num) / Math.log(2)))) {
+    return true;
+  }
+  return false;
 }
 
 /**
@@ -636,9 +639,8 @@ function getHypotenuse(a, b) {
  */
 function getCountOfOddNumbers(number) {
   let count = 0;
-  let i = 0;
-  for (i = 0; i <= number; i += 1) {
-    if (number % 2 === 1) {
+  for (let i = 0; i <= Math.abs(number); i += 1) {
+    if (i % 2 !== 0) {
       count += 1;
     }
   }
